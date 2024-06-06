@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="conteneur-formulaire">
+        <form id="formulaireInscription">
+            <label for="pseudo">Pseudo:</label>
+            <input type="text" id="pseudo" name="pseudo" required>
+            <div id="erreurPseudo" class="erreur" style="display:none;">Le pseudo doit contenir au moins 3 caractères.
+            </div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="erreurEmail" class="erreur" style="display:none;">L'email n'est pas valide.</div>
+            <div id="erreurEmailExiste" class="erreur" style="display:none;">Cet email est déjà utilisé.</div>
+
+            <label for="motDePasse">Mot de passe:</label>
+            <input type="password" id="motDePasse" name="motDePasse" required>
+            <div id="erreurMotDePasse" class="erreur" style="display:none;">Les mots de passe ne correspondent pas.
+            </div>
+
+            <label for="confirmerMotDePasse">Confirmez le mot de passe:</label>
+            <input type="password" id="confirmerMotDePasse" name="confirmerMotDePasse" required>
+
+            <label for="profil">Profil:</label>
+            <select id="profil" name="profil" required>
+                <option value="">Sélectionnez votre profil qui est le plus proche du votre</option>
+                <option value="developer">Développeur Web</option>
+                <option value="designer">Designer Web</option>
+                <option value="integrator">Intégrateur Web</option>
+                <option value="projectManager">Chef de Projet</option>
+                <option value="consultant">Consultant Web</option>
+                <option value="networkAdmin">Administrateur Réseau</option>
+                <option value="webmaster">Webmaster</option>
+            </select>
+            <div id="erreurProfil" class="erreur" style="display:none;">Veuillez sélectionner un profil.</div>
+
+            <label>Langage web le mieux maîtrisé:</label>
+            <div class="conteneur-radio">
+                <input type="radio" id="html" name="langageWeb" value="HTML" required>
+                <label for="html">HTML</label>
+            </div>
+            <div class="conteneur-radio">
+                <input type="radio" id="css" name="langageWeb" value="CSS" required>
+                <label for="css">CSS</label>
+            </div>
+            <div class="conteneur-radio">
+                <input type="radio" id="js" name="langageWeb" value="JavaScript" required>
+                <label for="js">JavaScript</label>
+            </div>
+            <div class="conteneur-radio">
+                <input type="radio" id="php" name="langageWeb" value="PHP" required>
+                <label for="php">PHP</label>
+            </div>
+
+            <input type="checkbox" id="conditions" name="conditions" required>
+            <label for="conditions">J'accepte les conditions</label><br>
+            <div id="erreurConditions" class="erreur" style="display:none;">Vous devez accepter les conditions.</div>
+
+            <button type="submit" id="boutonSoumettre" disabled>Soumettre</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
